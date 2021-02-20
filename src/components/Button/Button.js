@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const MenuButton = ({ className, children, icon }) => (
+const Button = ({ className, children, icon }) => (
   <button className={className}>
     <span className="icon">
       <FontAwesomeIcon icon={icon} />
@@ -10,7 +10,7 @@ const MenuButton = ({ className, children, icon }) => (
   </button>
 );
 
-const StyledMenuButton = styled(MenuButton)`
+const StyledButton = styled(Button)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,4 +40,4 @@ const StyledMenuButton = styled(MenuButton)`
   }
 `;
 
-export default StyledMenuButton;
+export default StyledButton;

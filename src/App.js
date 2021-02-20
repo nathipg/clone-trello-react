@@ -1,15 +1,15 @@
 import React from 'react';
 import GlobalStyle from './theme/GlobalStyle';
-import MenuButton from './components/Menu/MenuButton/MenuButton';
+import Button from './components/Button/Button';
 import { faTrello } from '@fortawesome/free-brands-svg-icons';
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
-      <MenuButton icon={faTrello}>
+      <Button icon={faTrello}>
         Quadros
-      </MenuButton>
+      </Button>
     </>
   );
 }
