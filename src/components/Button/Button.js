@@ -20,6 +20,7 @@ const StyledButton = styled(Button)`
   border-radius: 3px;
   color: white;
   cursor: pointer;
+  padding: 1.5px 4px;
 
   &:hover {
     background: rgba(255, 255, 255, 0.2);
@@ -30,13 +31,17 @@ const StyledButton = styled(Button)`
   }
 
   & > .icon {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   & > .text {
     font-size: 14px;
     font-weight: bold;
-    display: ${props => props.children ? 'inline' : 'none'}
+    display: none;
+
+    @media(min-width: 740px) {
+      display: ${props => props.children ? 'inline' : 'none'};
+    }
   }
 `;
 
