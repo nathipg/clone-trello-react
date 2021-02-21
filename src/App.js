@@ -1,17 +1,13 @@
 import React from 'react';
-import GlobalStyle from './theme/GlobalStyle';
-import Button from './components/Button/Button';
-import { faTrello } from '@fortawesome/free-brands-svg-icons';
+import Layout from './containers/Layout/Layout';
 
 const App = () => {
   return (
     <>
-      <GlobalStyle />
-      <Button icon={faTrello}>
-        Quadros
-      </Button>
+      <Layout>
+      </Layout>
     </>
   );
-}
+};
 
 export default App;

@@ -11,14 +11,13 @@ const Button = ({ className, children, icon }) => (
 );
 
 const StyledButton = styled(Button)`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: 0 4px 0 0;
   background: rgba(255, 255, 255, 0.3);
   border: none;
   border-radius: 3px;
-  font-weight: bold;
   color: white;
   cursor: pointer;
 
@@ -31,11 +30,12 @@ const StyledButton = styled(Button)`
   }
 
   & > .icon {
-    font-size: 18px;
+    font-size: 15px;
   }
 
   & > .text {
     font-size: 14px;
+    font-weight: bold;
     display: ${props => props.children ? 'inline' : 'none'}
   }
 `;
