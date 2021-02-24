@@ -26,6 +26,14 @@ const StyledButton = styled(Button)`
     background: rgba(255, 255, 255, 0.2);
   }
 
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
   & > span {
     padding: 5px;
   }
