@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Button from '../Button/Button';
 import Logo from '../Logo/Logo';
+import Button from '../Button/Button';
+import NoWrapContainer from '../NoWrapContainer/NoWrapContainer';
 
 import { faHome, faTh, faPlus, faInfoCircle, faBell } from '@fortawesome/free-solid-svg-icons';
 import { faTrello } from '@fortawesome/free-brands-svg-icons';
@@ -10,17 +11,17 @@ import { faTrello } from '@fortawesome/free-brands-svg-icons';
 const Header = ({className}) => {
   return (
     <header className={className}>
-      <div>
+      <NoWrapContainer>
         <Button icon={faTh} />
         <Button icon={faHome} hiddenXs={true} />
         <Button icon={faTrello}>Quadros</Button>
-      </div>
+      </NoWrapContainer>
       <Logo />
-      <div>
+      <NoWrapContainer>
         <Button icon={faPlus} />
         <Button icon={faInfoCircle} />
         <Button icon={faBell} />
-      </div>
+      </NoWrapContainer>
     </header>
   );
 };
