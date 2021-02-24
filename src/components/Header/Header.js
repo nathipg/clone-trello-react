@@ -12,7 +12,7 @@ const Header = ({className}) => {
     <header className={className}>
       <div>
         <Button icon={faTh} />
-        <Button icon={faHome} />
+        <Button icon={faHome} hiddenXs={true} />
         <Button icon={faTrello}>Quadros</Button>
       </div>
       <Logo />

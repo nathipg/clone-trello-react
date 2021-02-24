@@ -51,6 +51,10 @@ const StyledButton = styled(Button)`
       display: ${props => props.children ? 'inline' : 'none'};
     }
   }
+
+  @media(max-width: 740px) {
+    display: ${props => props.hiddenXs ? 'none' : 'inline-flex'};
+  }
 `;
 
 export default StyledButton;
