@@ -2,29 +2,44 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Button = ({ className, children, icon }) => (
-  <button className={className}>
-    <span className="icon">
-      <FontAwesomeIcon icon={icon} />
-    </span>
-    <span className="text">{children}</span>
-  </button>
-);
+const Button = ({ className, children, icon, img }) => {
+  let content = null;
+
+  if(icon) {
+    content = 
+      <span className="icon">
+        <FontAwesomeIcon icon={icon} />
+      </span>;
+  }
+  
+  if(img) {
+    content = <span className="img"></span>;
+  }
+
+  return (
+    <button className={className}>
+      {content}
+      <span className="text">{children}</span>
+    </button>
+  );
+};
 
 const StyledButton = styled(Button)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: 0 4px 0 0;
-  background: rgba(255, 255, 255, 0.3);
+  background: ${props => props.img ? 'none' : 'rgba(255, 255, 255, 0.3)'};
   border: none;
   border-radius: 3px;
   color: white;
   cursor: pointer;
-  padding: 1.5px 4px;
+  padding: ${props => props.img ? '0' : '1.5px 4px'};
+  min-width: 32px;
+  min-height: 32px;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: ${props => props.img ? 'none' : 'rgba(255, 255, 255, 0.2)'};
   }
 
   &:focus {
@@ -32,7 +47,7 @@ const StyledButton = styled(Button)`
   }
 
   &:active {
-    background: rgba(255, 255, 255, 0.1);
+    background: ${props => props.img ? 'none' : 'rgba(255, 255, 255, 0.1)'};
   }
 
   & > span {
@@ -41,6 +56,17 @@ const StyledButton = styled(Button)`
 
   & > .icon {
     font-size: 14px;
+  }
+
+  & > .img {
+    background-image: url(${props => props.img});
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    padding: 0;
   }
 
   & > .text {

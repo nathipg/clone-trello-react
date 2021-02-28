@@ -21,6 +21,7 @@ const Header = ({className}) => {
         <Button icon={faPlus} />
         <Button icon={faInfoCircle} />
         <Button icon={faBell} />
+        <Button img="https://raw.githubusercontent.com/nathipg/clone-trello-react/main/src/assets/images/profile-pic.jpg" />
       </NoWrapContainer>
     </header>
   );
