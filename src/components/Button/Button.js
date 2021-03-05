@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Button = ({ className, children, icon, img }) => {
+const Button = ({ className, children, icon, img, clicked }) => {
   let content = null;
 
   if(icon) {
@@ -17,7 +17,7 @@ const Button = ({ className, children, icon, img }) => {
   }
 
   return (
-    <button className={className}>
+    <button className={className} onClick={clicked}>
       {content}
       <span className="text">{children}</span>
     </button>
